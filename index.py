@@ -81,7 +81,8 @@ class RegexChecker:
                             message_tmp["function_call"]["arguments"]
                         )
                     except json.decoder.JSONDecodeError:
-                        pass
+                        self.flag = False
+                        continue
                     function_response = self.check_regex(
                         regex=arguments["regex"],
                         test_strs=arguments["test_strs"],
