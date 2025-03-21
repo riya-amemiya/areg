@@ -23,6 +23,6 @@ dependencies = [
     "yarl==1.18.3",
 ]
 
-[tool.ruff]
+[tool.ruff.lint]
 ignore = ["E501"]
 select = ["E", "F", "B"]
